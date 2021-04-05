@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Javascript</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!--<button onclick="document.getElementById('myImage').src='bulbon.jpg'">Turn on the light</button>
+
+  <img id="myImage" src="bulboff.jpg" style="width:100px">
+
+  <button type ="button" onclick="document.getElementById('myImage').src='bulboff.jpg'">Turn off the light</button>-->
+<br><br>
+<p id="ami"></p>
+<button onclick="document.getElementById('ami').innerHTML=Date()">click
+</button><br>
+<button onclick="this.innerHTML=Date()">time an date</button><br>
+
+<button onclick="myFunction()">try it</button>
+<p  id="demo">hello world</p>
+<button onclick="prev()">Previous</button>
+<img src="images/img1.jpeg" alt="" height="300" width="300">
+<button onclick="next()">Next</button><!--
+<p id="paraId">This is paragraph</p><br>
+<button onclick="addStyle()">Add style</button>
+<button onclick="removeStyle()">Remove style</button>
+<h1>I Love Banagladesh</h1>
+
+<h1>you have clicked on button</h1><br>
+<button class="myButton">Button 1</button>
+<button class="myButton">Button 2</button>
+<button class="myButton">Button 3</button>
+<video id="video" src="video/bus.mp4"></video><br><br>
+<button id="playVid">play</button>
+<button id="stopVid">Stop</button>
+<audio id="myAudio" src="sounds/a.mp3"></audio>
+<button onclick = "playAudio()">play audio</button>
+<button onclick = "pauseAudio()">pause audio</button>
+<button class="myButton a">a</button>
+<button class="myButton b">b</button>
+<button class="myButton c">c</button>
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<p>this ia a demo</p>
+<p>Enter a number between 5 to 10</p>
+<input type="text" id="numText">
+<button id="checkButton">Check</button>
+<form name="frm">
+  <table>
+    <caption>Example of different method and properties of Math object</caption>
+    <tr>
+      <td>input Box:</td>
+      <td><input type="text" name="getvalue"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="Absolute" onclick="calculate (1)"></td>
+      <td><input type="button" value="Round" onclick="calculate (2)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="Sine" onclick="calculate (3)"></td>
+      <td><input type="button" value="Cosine" onclick="calculate (4)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="Tangent" onclick="calculate (5)"></td>
+      <td><input type="button" value="Log" onclick="calculate (6)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="Floor" onclick="calculate (7)"></td>
+      <td><input type="button" value="Ceil" onclick="calculate (8)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="Square Root" onclick="calculate (9)"></td>
+      <td><input type="button" value="Random" onclick="calculate (10)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="Max" onclick="calculate (11)"></td>
+      <td><input type="button" value="Min" onclick="calculate (12)"></td>
+    </tr>
+    <tr>
+      <td><input type="button" value="E" onclick="calculate (13)"></td>
+      <td><input type="button" value="Pi" onclick="calculate (14)"></td>
+    </tr>
+    <tr>
+      <td>Result Box:</td>
+      <td><input type="text" name="showresult"></td>
+    </tr>
+  </table>
+</form>
+<div class="clock">
+  <span id="hour"></span>:
+  <span id="minute"></span>:
+  <span id="second"></span>
+</div>
+<button onclick="fadeOut()">Start</button>
+<img src="flower.webp" id="myimage" alt="img">
+<div>
+<input type="button" value="Start timeout" onclick="timeInit()">
+<input type="button" value="Stop timeout" onclick="timeClear()">
+</div>
+<div id="show"></div>
+<button onclick = "myFunction()">Try it</button>
+<button onclick = "myStopFunction()">Stop it</button>
+<button onclick = "myReg()">Test Now</button>
+<div id="str">My name is Raiyan</div>
+<div id="show"></div>
+<table>
+  <tr>
+    <td>input Box</td>
+    <td><input type="text" id="getvalue"></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><input type="button" value="check" onclick="getNumber()"></td>
+  </tr>
+  <tr>
+    <td>Result</td>
+    <td><textarea id="showvalue"></textarea></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>Your Email:</td>
+    <td><input type="text" id = "getvalue" onkeyup="validateEmail()"/></td>
+  </tr>
+</table>
+<form action="" method="" name="myform">
+  <table>
+    <tr>
+      <td><input type="text" name="inputbox" value=""/></td>
+      <td><input type="button" name="button" value="click" onclick="testResult(this.form)"/></td>
+    </tr>
+  </table>
+</form>
+<form action="" method="" name="myform">
+  <table>
+    <tr>
+      <td><input type="text" name="t1" onchange = "docCal(this.form, this.name)"/></td>
+    </tr>
+    <tr>
+      <td><input type="checkbox" name="chbox" onclick = "docCal(this.form, this.name)"/></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="result" onchange = "docCal(this.form, this.name)"/></td>
+    </tr>
+    <tr>
+      <td><input type="reset" name="Refresh"/></td>
+    </tr>
+  </table>
+</form>
+<form name="myform" onSubmit="testCode()">
+  <table>
+    <tr>
+      <td>select</td>
+      <td>
+        <input type="radio" name="rdbox" value="JAVA"/> JAVA<br>
+        <input type="radio" name="rdbox" value="PHP"/> PHP<br>
+        <input type="radio" name="rdbox" value="HTML"/> HTML<br>
+        <input type="radio" name="rdbox" value="CSS"/> CSS
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <input type="button" value="submit"/>
+        <input type="reset" value="Refresh"/>
+      </td>
+    </tr>
+
+  </table>
+</form>-->
+<!--<form name="myform" method="post" onSubmit="return validateForm()">
+  <table>
+    <tr>
+      <td>Name</td>
+      <td><input type="text" name="name" required = ""></td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td><input type="text" name="email"></td>
+    </tr>
+    <tr>
+      <td>Telephone</td>
+      <td>
+        <input type="text" name="phone"><br>
+        <input type="checkbox" name="ckbox"> Please do not call me
+      </td>
+    </tr>
+    <tr>
+      <td>what can we help you with?</td>
+      <td>
+      <select name="subject" value="">
+        <option>select one</option>
+        <option>Physics</option>
+        <option>Chemistry</option>
+        <option>Mathmatics</option>
+        <option>Biology</option>
+      </select>
+      </td>
+    </tr>
+    <tr>
+      <td>comment</td>
+      <td><input type="text" name="comment"></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <input type="button" value="submit">
+        <input type="reset" value="Refresh">
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <div id="state"></div>
+      </td>
+    </tr>
+  </table>
+</form>-->
+<script src = "index.js"></script>
+</body>
+</html>

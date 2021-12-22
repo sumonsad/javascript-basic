@@ -4,7 +4,7 @@
   outline: 0;
 }
 body{
-  font-family: arial;
+  font-family: Arial;
   font-size: 18px;
   color: #444;
   line-height: 25px;
@@ -88,28 +88,100 @@ select{font-size:16px; padding:3px; cursor:pointer; }
 #state{
   color:red;
 }
-form{
-  width:250px;
-  background: #ddd;
-  padding: 15px;
-  -webkit-box-shadow: 0 2px 5px 2px rgba(0,0,0,.6);
-box-shadow: 0 2px 5px 2px rgba(0,0,0,.6);
+
+
+/* clock */
+
+.clock{
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(to right,red, rgb(10, 122, 10) );
+  border-radius: 50%;
+  border: 2px solid black;
+  position: fixed;
 }
-input[type="text"]{
+.clock .number{
+  --rotation:0;
   width:100%;
-  font-size: 36px;
-  padding:5px 5px;
-  box-sizing: border-box;
-  text-align: right;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  color:black;
+  transform: rotate(var(--rotation));
+  font-size: 1.5rem;
 }
-hr{
-  margin:15px 0;
+.clock .number1{
+  --rotation:30deg;
 }
-input[type="button"]{
-  width:58px;
-  height: 55px;
-  font-size: 24px;
-  background: #aaa;
-  color:#fff;
-  margin-bottom: 5px;
+.clock .number2{
+  --rotation:60deg;
+}
+.clock .number3{
+  --rotation:90deg;
+}
+.clock .number4{
+  --rotation:120deg;
+}
+.clock .number5{
+  --rotation:150deg;
+}
+.clock .number6{
+  --rotation:180deg;
+}
+.clock .number7{
+  --rotation:210deg;
+}
+.clock .number8{
+  --rotation:240deg;
+}
+.clock .number9{
+  --rotation:270deg;
+}
+.clock .number10{
+  --rotation:300deg;
+}
+.clock .number11{
+  --rotation:330deg;
+}
+.clock .hand{
+  --rotation:0;
+  position:absolute;
+  height:50%;
+  width:10px;
+  left:50%;
+  bottom:50%;
+  background-color: black;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  z-index: 10;
+}
+.clock .second{
+  width:3px;
+  height: 45%;
+  background-color: red;
+}
+.clock .minute{
+width:7px;
+height: 40%;
+background-color: black;
+}
+.clock .hour{
+  width:10px;
+  height: 35%;
+  background-color: black;
+  }
+.clock::after{
+  content: '';
+  width:20px;
+  height: 20px;
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
